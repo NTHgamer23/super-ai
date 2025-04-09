@@ -1,0 +1,221 @@
+/* Demon AI Theme */
+body {
+    background-color: #1a0000;
+    color: #ff4d4d;
+    transition: all 0.3s;
+}
+
+.user-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.user-message > div {
+    background-color: #400000;
+    color: #ff9999;
+    padding: 0.75rem;
+    border-radius: 0.5rem 0.5rem 0 0.5rem;
+    max-width: 80%;
+    border-left: 3px solid #ff0000;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2);
+}
+
+.ai-message {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.ai-message > div {
+    background-color: #300000;
+    color: #ff6666;
+    padding: 0.75rem;
+    border-radius: 0.5rem 0.5rem 0.5rem 0;
+    max-width: 80%;
+    border-right: 3px solid #ff3333;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.2);
+}
+
+#chat-container {
+    scrollbar-width: thin;
+    scrollbar-color: #ff0000 #1a0000;
+    background-color: #2a0000;
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+#chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-container::-webkit-scrollbar-track {
+    background: #1a0000;
+}
+
+#chat-container::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+    border-radius: 4px;
+}
+
+.typing-indicator {
+    display: inline-block;
+    padding-left: 0.5rem;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #ff6666;
+    border-radius: 50%;
+    margin-right: 2px;
+    animation: typing 1s infinite ease-in-out;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Dark mode - even darker red theme */
+.dark {
+    background-color: #0a0000;
+    color: #ff6666;
+}
+
+.dark .user-message > div {
+    background-color: #500000;
+    color: #ff9999;
+}
+
+.dark .ai-message > div {
+    background-color: #400000;
+    color: #ff6666;
+}
+
+.dark #chat-container {
+    background-color: #1a0000;
+    border-color: #ff3333;
+}
+
+.dark #chat-container::-webkit-scrollbar-track {
+    background: #0a0000;
+}
+
+.dark #chat-container::-webkit-scrollbar-thumb {
+    background-color: #ff3333;
+}
+
+/* Theme toggle button - red style */
+#theme-toggle {
+    transition: all 0.3s ease;
+    color: #ff0000;
+    background-color: #2a0000;
+    border: 1px solid #ff3333;
+}
+
+/* Personality selector - demonic style */
+#personality-select {
+    border: 1px solid #ff3333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #2a0000;
+    color: #ff6666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#personality-select:hover {
+    border-color: #ff0000;
+    background-color: #400000;
+}
+
+.dark #personality-select {
+    background-color: #1a0000;
+    border-color: #ff6666;
+    color: #ff9999;
+}
+
+.dark #personality-select:hover {
+    background-color: #300000;
+}
+
+/* Error message - glowing red */
+#error-message {
+    transition: all 0.3s ease;
+    color: #ff3333;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Input and buttons styling */
+#user-input {
+    background-color: #200000;
+    color: #ff9999;
+    border: 1px solid #ff3333;
+}
+
+#send-btn {
+    background-color: #ff0000;
+    color: #000;
+    font-weight: bold;
+    border: none;
+}
+
+#send-btn:hover {
+    background-color: #ff3333;
+}
+
+/* Language selector - demonic style */
+#language-select {
+    border: 1px solid #ff3333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #2a0000;
+    color: #ff6666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#language-select:hover {
+    border-color: #ff0000;
+    background-color: #400000;
+}
+
+/* Clear chat button - blood red */
+#clear-chat {
+    background-color: #400000;
+    border: 1px solid #ff0000;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #ff9999;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#clear-chat:hover {
+    background-color: #500000;
+}
+
+.dark #clear-chat {
+    background-color: #300000;
+    border-color: #ff3333;
+    color: #ff6666;
+}
+
+.dark #clear-chat:hover {
+    background-color: #400000;
+}
